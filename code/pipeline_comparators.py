@@ -33,7 +33,7 @@ from review2_raw_scores import dtw_scores_single  # noqa: E402
 from table_all_methods import solo_head_new  # noqa: E402
 
 DEST = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output\paper_review\final")
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 
 
 def domain_dtw(view, units):

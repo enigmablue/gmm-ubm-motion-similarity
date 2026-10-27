@@ -15,7 +15,7 @@ measure (MAR is a ratio, so it is scale-invariant):
   1. face boxes are read from output/fullbody_std/features/, which Fix B already
      extracted with 100% face detection, instead of re-running YuNet;
   2. frames are downscaled to the same 1920-long-side canvas Fix B used before
-     FaceMesh runs, so Stella's 4K videos cost the same as the 1080p ones.
+     FaceMesh runs, so SpeakerB's 4K videos cost the same as the 1080p ones.
 
 Writes output/fullbody_mouth.csv
     group,video,mar_mean,mar_std,resting,threshold,talk_pct,samples
@@ -43,7 +43,7 @@ mp_face_mesh = mp.solutions.face_mesh
 
 
 def videos(group):
-    folder = BASE / ("fullbody-Aru" if group == "Aru" else "fullbody-Stella")
+    folder = BASE / ("fullbody-SpeakerA" if group == "SpeakerA" else "fullbody-SpeakerB")
     for p in sorted(folder.glob("*.MOV")):
         yield p
 
@@ -51,14 +51,14 @@ def videos(group):
 def solo_key(group, vpath):
     """Map a solo video file to its session number, 1-6."""
     stem = vpath.stem
-    if group == "Aru":
-        return f"fb_aru_{int(stem.split('_')[-1]):02d}"
+    if group == "SpeakerA":
+        return f"fb_speakerA_{int(stem.split('_')[-1]):02d}"
     return stem
 
 
 def features_path(group, vpath):
-    person = "aru" if group == "Aru" else "stella"
-    if group == "Aru":
+    person = "speakerA" if group == "SpeakerA" else "speakerB"
+    if group == "SpeakerA":
         vid = f"{int(vpath.stem.split('_')[-1])}"
     else:
         vid = vpath.stem
@@ -141,7 +141,7 @@ def process(group, vpath):
 
 
 def main():
-    groups = sys.argv[1:] if len(sys.argv) > 1 else ["Aru", "Stella"]
+    groups = sys.argv[1:] if len(sys.argv) > 1 else ["SpeakerA", "SpeakerB"]
     rows = []
     for group in groups:
         for vpath in videos(group):
@@ -167,7 +167,7 @@ def main():
     print(f"\nSaved {len(rows)} rows to {out_path}")
 
     print("\nTalking percentage, solo recordings:")
-    for group in ["Aru", "Stella"]:
+    for group in ["SpeakerA", "SpeakerB"]:
         vals = [(n, r["talk_pct"]) for g, n, r in rows if g == group]
         print(f"  {group}: " + "  ".join(f"{n}={v:.1f}%" for n, v in vals))
 

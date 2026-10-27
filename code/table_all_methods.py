@@ -13,8 +13,8 @@ maincam. This script reports both conventions for every method:
     fullbody unadjusted  head maincam,  hands fullbody, mouth fullbody  <- the paper
     fullbody adjusted    head solo,     hands fullbody, mouth solo
 
-Aggregate uses six domains (Hand/Head/Mouth x Stella/Aru). GMM-UBM and DTW use
-four (Hand/Head x Stella/Aru), since mouth is not one of their features. All
+Aggregate uses six domains (Hand/Head/Mouth x SpeakerB/SpeakerA). GMM-UBM and DTW use
+four (Hand/Head x SpeakerB/SpeakerA), since mouth is not one of their features. All
 report the consensus rank of pair (4,5) out of 15.
 
 Usage:
@@ -45,7 +45,7 @@ MAINCAM_STD = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output\maincam_hand
 def load_maincam_hands_std(person):
     """Maincam hands re-extracted at every 5th frame (matching the fullbody)."""
     out = {}
-    fp = "face1" if person == "stella" else "face2"
+    fp = "face1" if person == "speakerB" else "face2"
     for v in vids:
         lm = MAINCAM_STD / f"{v}_{person}_hand_landmarks.csv"
         ft = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output\maincam") / f"{v}_features.csv"
@@ -62,7 +62,7 @@ def load_maincam_hands_std(person):
     return out
 
 vids = ["1", "2", "3", "4", "5", "6"]
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 HAND_KEYS = ["CurlMean", "CurlStd", "CurlP25"]
 HEAD_KEYS = ["HeadGest", "YawPitchRatio", "HeadDet"]
 MOUTH_KEYS = ["talk_pct"]

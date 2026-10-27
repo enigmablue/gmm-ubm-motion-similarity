@@ -13,7 +13,7 @@ hands    left and right tracked as separate channels. A derivative is taken only
          face-width normalisation in both views.
 head     maincam head from `output/maincam`; solo head from `output/solo_head_std`
          (re-extracted on a common 1920 canvas). Both 18D, same builder.
-domains  Head_Stella, Head_Aru, Hand_Stella, Hand_Aru.
+domains  Head_SpeakerB, Head_SpeakerA, Hand_SpeakerB, Hand_SpeakerA.
 consensus  mean over domains of 1 - (rank - 1)/14. Higher is better; 1.0 = first
            in every domain. Identical to `table_all_methods.rank_consensus`.
 
@@ -48,7 +48,7 @@ from table_all_methods import solo_head_new  # noqa: E402
 OUT = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output")
 DEST = OUT / "paper_review" / "final"
 vids = ["1", "2", "3", "4", "5", "6"]
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 PAIRS = [(a, b) for a, b in combinations(vids, 2)]
 TARGET = "(4,5)"
 
@@ -258,8 +258,8 @@ if __name__ == "__main__":
         dr = gmm[view]
         print(f"\nGMM-UBM, {view}")
         print(f"   {'subset':<24}{'rank(4,5)':>11}{'C':>9}")
-        subsets = [("head only", ["Head_Stella", "Head_Aru"]),
-                   ("hands only", ["Hand_Stella", "Hand_Aru"]),
+        subsets = [("head only", ["Head_SpeakerB", "Head_SpeakerA"]),
+                   ("hands only", ["Hand_SpeakerB", "Hand_SpeakerA"]),
                    ("full (4 domains)", list(dr))]
         for d in dr:
             subsets.append((f"drop {d}", [x for x in dr if x != d]))

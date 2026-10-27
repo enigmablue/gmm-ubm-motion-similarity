@@ -4,10 +4,10 @@ WHY
 ---
 `paper_review/cell_extractor.py` shares the head features between camera
 conditions, taking them from the maincam. When the head is instead taken from the
-solo recordings, the Stella head domain collapses (12/15) in both GMM-UBM and the
-aggregate. But the solo head features (`output/stella/`, `output/aru/`) were
+solo recordings, the SpeakerB head domain collapses (12/15) in both GMM-UBM and the
+aggregate. But the solo head features (`output/speakerB/`, `output/speakerA/`) were
 produced by an ad-hoc command-line run at each video's native resolution:
-Stella's videos 1-4 are 4K (2160x3840) and 5-6 are 1080p. Fix B rebuilt hands and
+SpeakerB's videos 1-4 are 4K (2160x3840) and 5-6 are 1080p. Fix B rebuilt hands and
 face boxes on a common canvas but never touched head pose.
 
 This script re-extracts solo head pose the same way, but on a common 1920-long-side
@@ -27,7 +27,7 @@ Output: output/solo_head_std/{vid}_{person}_features.csv
 
 Usage:
     python extract_solo_head_std.py            # all 12
-    python extract_solo_head_std.py 4 stella   # one recording
+    python extract_solo_head_std.py 4 speakerB   # one recording
 """
 import csv
 import math
@@ -176,13 +176,13 @@ def main():
     if len(sys.argv) >= 3:
         jobs = [(sys.argv[1], sys.argv[2])]
     else:
-        jobs = [(str(v), s) for v in range(1, 7) for s in ["stella", "aru"]]
+        jobs = [(str(v), s) for v in range(1, 7) for s in ["speakerB", "speakerA"]]
 
     print(f"{'recording':<24}{'rows':>7}{'face %':>9}{'sd yaw':>9}{'sd pitch':>10}{'sd roll':>9}")
     print("-" * 68)
     for vid, person in jobs:
-        base = BASE / ("fullbody-Aru" if person == "aru" else "fullbody-Stella")
-        pattern = f"fb_aru_{int(vid):02d}.MOV" if person == "aru" else f"{int(vid)}.MOV"
+        base = BASE / ("fullbody-SpeakerA" if person == "speakerA" else "fullbody-SpeakerB")
+        pattern = f"fb_speakerA_{int(vid):02d}.MOV" if person == "speakerA" else f"{int(vid)}.MOV"
         src = base / pattern
         if not src.exists():
             print(f"{person}/{vid}: MISSING {src}")

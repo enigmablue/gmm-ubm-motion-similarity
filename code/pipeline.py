@@ -92,7 +92,7 @@ def key(p):
 def face_ref(view, vid, person):
     """{frame: (cx, cy, face_width)}."""
     cfg = VIEWS[view]
-    fp = ("face1" if person == "stella" else "face2") \
+    fp = ("face1" if person == "speakerB" else "face2") \
         if cfg["per_person_face"] else "face1"
     path = cfg["feat"] / cfg["feat_name"].format(v=vid, person=person)
     ref = {}
@@ -186,7 +186,7 @@ def build_hand_frames(view, vid, person, units):
 def domain_scores(view, units):
     """{(domain): (scores, K, r, n_rows)} for hands and heads."""
     out = {}
-    for person, name in [("stella", "Stella"), ("aru", "Aru")]:
+    for person, name in [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]:
         raw = {}
         for v in vids:
             f = build_hand_frames(view, v, person, units)
@@ -196,7 +196,7 @@ def domain_scores(view, units):
         out[f"Hand_{name}"] = ({key(p): x for p, x in s.items()}, k, r,
                                sum(len(x) for x in raw.values()))
     heads = maincam_head if view == "maincam" else solo_head_new
-    for person, name in [("stella", "Stella"), ("aru", "Aru")]:
+    for person, name in [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]:
         s, k, r = gmm_scores(heads(person))
         out[f"Head_{name}"] = ({key(p): x for p, x in s.items()}, k, r,
                                None)

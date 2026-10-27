@@ -35,7 +35,7 @@ from review2_raw_scores import dtw_scores_single  # noqa: E402
 from table_all_methods import solo_head_new  # noqa: E402
 
 TIPS = [4, 8, 12, 16, 20]
-PERSON = [("stella", "Stella"), ("aru", "Aru")]
+PERSON = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 TARGET = "(4,5)"
 
 

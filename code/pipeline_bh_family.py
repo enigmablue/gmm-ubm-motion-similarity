@@ -68,28 +68,28 @@ def main():
 
     full_s = consensus(side)[1]
     full_f = consensus(front)[1]
-    heads_s, heads_f = restricted(side, ("Head_Stella", "Head_Aru")), \
-        restricted(front, ("Head_Stella", "Head_Aru"))
-    hands_s, hands_f = restricted(side, ("Hand_Stella", "Hand_Aru")), \
-        restricted(front, ("Hand_Stella", "Hand_Aru"))
+    heads_s, heads_f = restricted(side, ("Head_SpeakerB", "Head_SpeakerA")), \
+        restricted(front, ("Head_SpeakerB", "Head_SpeakerA"))
+    hands_s, hands_f = restricted(side, ("Hand_SpeakerB", "Hand_SpeakerA")), \
+        restricted(front, ("Hand_SpeakerB", "Hand_SpeakerA"))
 
     tests = {
         "consensus": report("full four-domain consensus", full_s, full_f),
         "head": report("head only, two domains", heads_s, heads_f),
         "hand": report("hand only, two domains", hands_s, hands_f),
-        "Hand_Stella": report("Stella hands",
-                              side["Hand_Stella"][0], front["Hand_Stella"][0]),
-        "Hand_Aru": report("Aru hands",
-                           side["Hand_Aru"][0], front["Hand_Aru"][0]),
-        "Head_Stella": report("Stella head",
-                              side["Head_Stella"][0], front["Head_Stella"][0]),
-        "Head_Aru": report("Aru head",
-                           side["Head_Aru"][0], front["Head_Aru"][0]),
+        "Hand_SpeakerB": report("SpeakerB hands",
+                              side["Hand_SpeakerB"][0], front["Hand_SpeakerB"][0]),
+        "Hand_SpeakerA": report("SpeakerA hands",
+                           side["Hand_SpeakerA"][0], front["Hand_SpeakerA"][0]),
+        "Head_SpeakerB": report("SpeakerB head",
+                              side["Head_SpeakerB"][0], front["Head_SpeakerB"][0]),
+        "Head_SpeakerA": report("SpeakerA head",
+                           side["Head_SpeakerA"][0], front["Head_SpeakerA"][0]),
     }
 
     print("observed cross-view correlations")
-    for k in ["consensus", "head", "hand", "Hand_Stella", "Hand_Aru",
-              "Head_Stella", "Head_Aru"]:
+    for k in ["consensus", "head", "hand", "Hand_SpeakerB", "Hand_SpeakerA",
+              "Head_SpeakerB", "Head_SpeakerA"]:
         t = tests[k]
         print(f"  {t['label']:<34} rho {t['rho']:+.3f}   exact p {t['p']:.4f}")
 
@@ -108,7 +108,7 @@ def main():
         "m=1 consensus only": ["consensus"],
         "m=3 consensus + head + hand": ["consensus", "head", "hand"],
         "m=5 four domains + consensus":
-            ["consensus", "Hand_Stella", "Hand_Aru", "Head_Stella", "Head_Aru"],
+            ["consensus", "Hand_SpeakerB", "Hand_SpeakerA", "Head_SpeakerB", "Head_SpeakerA"],
         "m=2 head + hand": ["head", "hand"],
     }
 

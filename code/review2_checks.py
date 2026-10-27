@@ -45,10 +45,10 @@ from table_all_methods import head_stats_solo_std  # noqa: E402
 OUT = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output")
 DEST = OUT / "paper_review" / "final"
 vids = ["1", "2", "3", "4", "5", "6"]
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 PAIRS = [f"({a},{b})" for a, b in combinations(vids, 2)]
 TARGET = "(4,5)"
-DOMAINS = ["Hand_Stella", "Head_Stella", "Hand_Aru", "Head_Aru"]
+DOMAINS = ["Hand_SpeakerB", "Head_SpeakerB", "Hand_SpeakerA", "Head_SpeakerA"]
 
 
 # ===================== AVERAGE RANKS ======================================

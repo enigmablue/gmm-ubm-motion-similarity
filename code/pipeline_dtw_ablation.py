@@ -27,7 +27,7 @@ from pipeline_comparators import consensus, domain_dtw  # noqa: E402
 from review2_raw_scores import dtw_scores_single  # noqa: E402
 from table_all_methods import solo_head_new  # noqa: E402
 
-PERSON = [("stella", "Stella"), ("aru", "Aru")]
+PERSON = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 HEAD_CONFIGS = {
     "9D": [0, 1, 2, 3, 4, 5, 6, 7, 8],
     "9D+S": [0, 1, 2, 3, 4, 5, 6, 7, 8, 14],
@@ -126,7 +126,7 @@ def main():
                    side_cons=rank_of(C["maincam"]),
                    front_cons=rank_of(C["fullbody"]))
         out["head"][cfg] = row
-        print(f"  {cfg:<8} head ranks St {ranks['Stella']:.1f} Ar {ranks['Aru']:.1f}"
+        print(f"  {cfg:<8} head ranks St {ranks['SpeakerB']:.1f} Ar {ranks['SpeakerA']:.1f}"
               f"   consensus side {row['side_cons']:.1f}/15"
               f"  front {row['front_cons']:.1f}/15")
 
@@ -147,7 +147,7 @@ def main():
         row = dict(hand_ranks=ranks, side_cons=rank_of(C["maincam"]),
                    front_cons=rank_of(C["fullbody"]))
         out["hand"][cfg] = row
-        print(f"  {cfg:<10} hand ranks St {ranks['Stella']:.1f} Ar {ranks['Aru']:.1f}"
+        print(f"  {cfg:<10} hand ranks St {ranks['SpeakerB']:.1f} Ar {ranks['SpeakerA']:.1f}"
               f"   consensus side {row['side_cons']:.1f}/15"
               f"  front {row['front_cons']:.1f}/15")
 

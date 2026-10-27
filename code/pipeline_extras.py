@@ -38,7 +38,7 @@ from review2_method_tests import (agg_cell, consensus_table,  # noqa: E402
                                   dtw_cell, gallery_ranks, mrr, run_aggregate)
 from table_all_methods import solo_head_new  # noqa: E402
 
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 TARGET = "(4,5)"
 
 

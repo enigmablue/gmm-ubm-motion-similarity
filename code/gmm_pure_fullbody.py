@@ -85,10 +85,10 @@ def solo_head(person):
     """18D head features for one speaker's six solo recordings."""
     raw = {}
     for v in vids:
-        if person == "stella":
-            p = MC / "stella" / f"{v}_features.csv"
+        if person == "speakerB":
+            p = MC / "speakerB" / f"{v}_features.csv"
         else:
-            p = MC / "aru" / f"fb_aru_{int(v):02d}_features.csv"
+            p = MC / "speakerA" / f"fb_speakerA_{int(v):02d}_features.csv"
         if not p.exists():
             continue
         f = _head_18d(list(csv.DictReader(open(p))), "face1")
@@ -105,7 +105,7 @@ def solo_head(person):
 def maincam_head(person):
     """18D head features for one speaker, as the paper computes them."""
     raw = {}
-    fp = "face1" if person == "stella" else "face2"
+    fp = "face1" if person == "speakerB" else "face2"
     path = MC / "maincam"
     for v in vids:
         p = path / f"{v}_features.csv"
@@ -137,24 +137,24 @@ def fullbody_hands(person):
 
 def run(label, head_by_person, hand_by_person):
     domains = {}
-    for person, name in [("stella", "Stella"), ("aru", "Aru")]:
+    for person, name in [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]:
         domains[f"Hand_{name}"] = run_gmm_domain(hand_by_person[person])
         domains[f"Head_{name}"] = run_gmm_domain(head_by_person[person])
     r = consensus(domains)
     dr = r["domain_ranks"]
     print(f"\n{label}")
-    print(f"   domain ranks (4,5): Hand_St {dr['Hand_Stella']}/15, "
-          f"Hand_Ar {dr['Hand_Aru']}/15, Head_St {dr['Head_Stella']}/15, "
-          f"Head_Ar {dr['Head_Aru']}/15")
+    print(f"   domain ranks (4,5): Hand_St {dr['Hand_SpeakerB']}/15, "
+          f"Hand_Ar {dr['Hand_SpeakerA']}/15, Head_St {dr['Head_SpeakerB']}/15, "
+          f"Head_Ar {dr['Head_SpeakerA']}/15")
     print(f"   CONSENSUS rank {r['rank']}/15, C = {r['C45']:.3f}, "
           f"next best C = {r['next_best']:.3f}, gap = {r['gap']:+.3f}")
     return r
 
 
 def main():
-    hand_fb = {p: fullbody_hands(p) for p in ["stella", "aru"]}
-    head_mc = {p: maincam_head(p) for p in ["stella", "aru"]}
-    head_fb = {p: solo_head(p) for p in ["stella", "aru"]}
+    hand_fb = {p: fullbody_hands(p) for p in ["speakerB", "speakerA"]}
+    head_mc = {p: maincam_head(p) for p in ["speakerB", "speakerA"]}
+    head_fb = {p: solo_head(p) for p in ["speakerB", "speakerA"]}
 
     print("=" * 74)
     print("GMM-UBM, FULLBODY HANDS, TWO HEAD SOURCES")

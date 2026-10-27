@@ -42,7 +42,7 @@ from table_all_methods import head_stats_solo_std  # noqa: E402
 OUT = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output")
 DEST = OUT / "paper_review" / "final"
 vids = ["1", "2", "3", "4", "5", "6"]
-PEOPLE = [("stella", "Stella"), ("aru", "Aru")]
+PEOPLE = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 PAIRS = [(a, b) for a, b in combinations(vids, 2)]
 HAND_KEYS = ["CurlMean", "CurlStd", "CurlP25"]
 HEAD_KEYS = ["HeadGest", "YawPitchRatio", "HeadDet"]
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
     print("\n   per-domain (same domain, both views):")
     out["per_domain"] = {}
-    for d in ["Hand_Stella", "Hand_Aru", "Head_Stella", "Head_Aru"]:
+    for d in ["Hand_SpeakerB", "Hand_SpeakerA", "Head_SpeakerB", "Head_SpeakerA"]:
         r = exact_matrix_test({f"({a},{b})": float(1.0 - (dmc[d][f"({a},{b})"] - 1) / 14.0)
                                for a, b in PAIRS},
                               {f"({a},{b})": float(1.0 - (dfb[d][f"({a},{b})"] - 1) / 14.0)

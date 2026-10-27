@@ -36,7 +36,7 @@ from pipeline import (DEST, average_rank, build_hand_frames, consensus,  # noqa:
                       key, vids)
 from review2_raw_scores import gmm_scores  # noqa: E402
 
-PERSON = [("stella", "Stella"), ("aru", "Aru")]
+PERSON = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 PKEYS = [f"({a},{b})" for i, a in enumerate(vids) for b in vids[i + 1:]]
 ORDER = ["9D", "9D+S", "9D+E", "9D+A", "9D+E+S", "9D+A+S", "9D+A+E", "18D"]
 
@@ -112,8 +112,8 @@ def main():
         z = (c45 - float(np.mean(others))) / float(np.std(others))
         rank = 1 + sum(1 for p in PKEYS if p != "(4,5)"
                        and cons[p] > c45 + 1e-12)
-        r_st = average_rank(dom["Head_Stella"][0], "(4,5)")
-        r_ar = average_rank(dom["Head_Aru"][0], "(4,5)")
+        r_st = average_rank(dom["Head_SpeakerB"][0], "(4,5)")
+        r_ar = average_rank(dom["Head_SpeakerA"][0], "(4,5)")
 
         old = MANUSCRIPT[cfg]
         print(f"{cfg:<10}{len(cols):>5}{r_st:>7.0f}{r_ar:>7.0f}{c45:>8.3f}"

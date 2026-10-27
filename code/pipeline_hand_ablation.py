@@ -46,7 +46,7 @@ from pipeline import (DEST, FPS, SUBSAMPLE, VIEWS, average_rank,  # noqa: E402
 from review2_raw_scores import gmm_scores  # noqa: E402
 
 TIPS = [4, 8, 12, 16, 20]
-PERSON = [("stella", "Stella"), ("aru", "Aru")]
+PERSON = [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]
 MANUSCRIPT = {
     "23D wrist-relative": (23, 8, 8, 0.696, 2),
     "8D wrist only": (8, 4, 5, 0.821, 1),
@@ -172,15 +172,15 @@ def main():
         order = sorted(cons.values(), reverse=True)
         cons_rank = 1 + sum(1 for x in order if x > c45 + 1e-12)
         r = {d: average_rank(dom[d][0], "(4,5)")
-             for d in ("Hand_Stella", "Hand_Aru")}
+             for d in ("Hand_SpeakerB", "Hand_SpeakerA")}
 
         old = MANUSCRIPT[name]
-        print(f"{name:<22}{dims:>5}{r['Hand_Stella']:>9.0f}"
-              f"{r['Hand_Aru']:>9.0f}{c45:>8.3f}{cons_rank:>6}/15"
+        print(f"{name:<22}{dims:>5}{r['Hand_SpeakerB']:>9.0f}"
+              f"{r['Hand_SpeakerA']:>9.0f}{c45:>8.3f}{cons_rank:>6}/15"
               f"   {old[1]}/{old[2]}/{old[3]:.3f}/{old[4]}")
         payload[name] = dict(dims=int(dims),
-                             Hand_St=float(r["Hand_Stella"]),
-                             Hand_Ar=float(r["Hand_Aru"]),
+                             Hand_St=float(r["Hand_SpeakerB"]),
+                             Hand_Ar=float(r["Hand_SpeakerA"]),
                              C45=float(c45), cons_rank=int(cons_rank),
                              K={p: dom[f"Hand_{n}"][1] for p, n in PERSON},
                              r={p: dom[f"Hand_{n}"][2] for p, n in PERSON})

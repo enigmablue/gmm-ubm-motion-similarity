@@ -15,7 +15,7 @@ WHAT THIS DOES
 --------------
 Re-runs MediaPipe Hands on the six maincam videos at every 5th frame, at native
 resolution (1920x1080, which already equals the fullbody canvas convention of
-"longer side 1920", so no resize is needed). Hands are assigned to Stella or Aru
+"longer side 1920", so no resize is needed). Hands are assigned to SpeakerB or SpeakerA
 by wrist x-proximity to the face box centre, as the original script did.
 
 Writes output/maincam_hands_std/{vid}_{person}_hand_landmarks.csv
@@ -41,15 +41,15 @@ SUBSAMPLE = 5
 
 
 def face_centres(vid):
-    """frame -> (stella_cx, aru_cx), None where not detected."""
+    """frame -> (speakerB_cx, speakerA_cx), None where not detected."""
     out = {}
     for r in csv.DictReader(open(OUT / "maincam" / f"{vid}_features.csv")):
         c = {}
-        for name, fp in [("stella", "face1"), ("aru", "face2")]:
+        for name, fp in [("speakerB", "face1"), ("speakerA", "face2")]:
             ok = r.get(f"{fp}_detected") == "1" and r.get(f"{fp}_x")
             c[name] = ((float(r[f"{fp}_x"]) + float(r[f"{fp}_w"]) / 2)
                        if ok else None)
-        out[int(r["frame"])] = (c["stella"], c["aru"])
+        out[int(r["frame"])] = (c["speakerB"], c["speakerA"])
     return out
 
 
@@ -66,7 +66,7 @@ def extract(vid):
     w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-    rows = {"stella": [], "aru": []}
+    rows = {"speakerB": [], "speakerA": []}
     with mp.solutions.hands.Hands(static_image_mode=False, max_num_hands=2,
                                   min_detection_confidence=0.5,
                                   min_tracking_confidence=0.5) as hands:
@@ -87,13 +87,13 @@ def extract(vid):
                 d_a = abs(wx - ac) if ac is not None else 99999
                 if sc is None and ac is None:
                     continue
-                person = "stella" if d_s <= d_a else "aru"
+                person = "speakerB" if d_s <= d_a else "speakerA"
                 rows[person].append((fi, f"{fi / fps:.3f}", label, pts))
     cap.release()
 
     DEST.mkdir(parents=True, exist_ok=True)
     counts = {}
-    for person in ["stella", "aru"]:
+    for person in ["speakerB", "speakerA"]:
         path = DEST / f"{vid}_{person}_hand_landmarks.csv"
         with open(path, "w", newline="") as f:
             wr = csv.writer(f)
@@ -113,13 +113,13 @@ def extract(vid):
 
 def main():
     vids = sys.argv[1:] if len(sys.argv) > 1 else ["1", "2", "3", "4", "5", "6"]
-    print(f"{'video':<7}{'stella frames':>15}{'aru frames':>13}{'extracted':>11}")
+    print(f"{'video':<7}{'speakerB frames':>15}{'speakerA frames':>13}{'extracted':>11}")
     print("-" * 48)
     for v in vids:
         counts, expected = extract(v)
         if counts is None:
             continue
-        print(f"{v:<7}{counts['stella']:>15}{counts['aru']:>13}{expected:>11}")
+        print(f"{v:<7}{counts['speakerB']:>15}{counts['speakerA']:>13}{expected:>11}")
     print(f"\nWrote to {DEST}")
     print("Compare with output/landmarks/: those files hold every 3rd frame, so the")
     print("analysis could only read about a third of them.")

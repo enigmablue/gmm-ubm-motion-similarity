@@ -2,7 +2,7 @@
 
 GROUND TRUTH
 ------------
-`maincam i`, `stella i` and `aru i` are the same person in the same recording
+`maincam i`, `speakerB i` and `speakerA i` are the same person in the same recording
 session. Verified two ways: embedded recording times agree to the minute, and
 durations agree to within a few seconds (`probe_videos.py`). Six sessions were
 recorded back-to-back on 31 July 2026.
@@ -18,7 +18,7 @@ solo recording from session i scores highest.
 This target does not depend on the aggregate reference standard or on any
 measure designed for this paper: it is fixed by when the recordings were made.
 
-Domains: Hand_Stella, Hand_Aru, Head_Stella, Head_Aru, plus a consensus over the
+Domains: Hand_SpeakerB, Hand_SpeakerA, Head_SpeakerB, Head_SpeakerA, plus a consensus over the
 two domains belonging to each speaker.
 
 Usage:
@@ -94,10 +94,10 @@ def _head_18d(rows, fp):
 
 def head_source(vid, view, person):
     if view == "maincam":
-        return MC / "maincam" / f"{vid}_features.csv", ("face1" if person == "stella" else "face2")
-    if person == "stella":
-        return MC / "stella" / f"{vid}_features.csv", "face1"
-    return MC / "aru" / f"fb_aru_{int(vid):02d}_features.csv", "face1"
+        return MC / "maincam" / f"{vid}_features.csv", ("face1" if person == "speakerB" else "face2")
+    if person == "speakerB":
+        return MC / "speakerB" / f"{vid}_features.csv", "face1"
+    return MC / "speakerA" / f"fb_speakerA_{int(vid):02d}_features.csv", "face1"
 
 
 def build_head_set(view, person):
@@ -283,7 +283,7 @@ def main():
 
     print("Building features (query = maincam, gallery = same speaker's solo)...")
     sets = {}
-    for person in ["stella", "aru"]:
+    for person in ["speakerB", "speakerA"]:
         sets[("Hand", person)] = (build_hand_set("maincam", person),
                                   build_hand_set("fullbody", person))
         sets[("Head", person)] = (build_head_set("maincam", person),
@@ -320,7 +320,7 @@ def main():
     results = {(m, lab): rank_table(sc) for (m, lab), sc in raw.items()}
 
     # ---------------- report ----------------
-    order = ["Hand_Stella", "Hand_Aru", "Head_Stella", "Head_Aru"]
+    order = ["Hand_SpeakerB", "Hand_SpeakerA", "Head_SpeakerB", "Head_SpeakerA"]
     method = "DTW" if use_dtw else "GMM"
 
     print("\n" + "=" * 78)
@@ -345,7 +345,7 @@ def main():
     print(hdr2)
     print("-" * len(hdr2))
     cons_tot_hits = cons_tot = 0
-    for person, pname in [("stella", "Stella"), ("aru", "Aru")]:
+    for person, pname in [("speakerB", "SpeakerB"), ("speakerA", "SpeakerA")]:
         doms = [d for d in [f"Hand_{pname}", f"Head_{pname}"] if (method, d) in results]
         if len(doms) < 2:
             continue

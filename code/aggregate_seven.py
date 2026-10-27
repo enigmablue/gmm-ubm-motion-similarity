@@ -7,12 +7,12 @@ that mouth has been extracted for the solo recordings
 
 Six domains per view, mirroring the four-domain structure already used:
 
-    Hand Stella   CurlMean, CurlStd, CurlP25
-    Hand Aru      CurlMean, CurlStd, CurlP25
-    Head Stella   HeadGest, YawPitchRatio, HeadDet
-    Head Aru      HeadGest, YawPitchRatio, HeadDet
-    Mouth Stella  talk_pct
-    Mouth Aru     talk_pct
+    Hand SpeakerB   CurlMean, CurlStd, CurlP25
+    Hand SpeakerA      CurlMean, CurlStd, CurlP25
+    Head SpeakerB   HeadGest, YawPitchRatio, HeadDet
+    Head SpeakerA      HeadGest, YawPitchRatio, HeadDet
+    Mouth SpeakerB  talk_pct
+    Mouth SpeakerA     talk_pct
 
 Each domain ranks the 15 pairs by the mean percentage difference of its measures
 (lower = more alike). The consensus is the rank-normalised mean across the six
@@ -22,7 +22,7 @@ Hand sources: maincam view from output/{vid}_hands.csv; fullbody view from
 output/fullbody_std/landmarks/, with curl computed exactly as
 `src/utils/hand_all_videos.py` does for the maincam.
 Head source: the features for that view (maincam/{vid}_features.csv, or
-stella/{vid}_features.csv and aru/fb_aru_XX_features.csv).
+speakerB/{vid}_features.csv and speakerA/fb_speakerA_XX_features.csv).
 Mouth source: talking_pct.json (maincam) and fullbody_mouth.csv (fullbody).
 
 Usage:
@@ -54,10 +54,10 @@ def pct_diff(a, b):
 def head_stats(vid, person, view):
     if view == "maincam":
         path = OUT / "maincam" / f"{vid}_features.csv"
-        fp = "face1" if person == "stella" else "face2"
+        fp = "face1" if person == "speakerB" else "face2"
     else:
-        path = (OUT / "stella" / f"{vid}_features.csv" if person == "stella"
-                else OUT / "aru" / f"fb_aru_{int(vid):02d}_features.csv")
+        path = (OUT / "speakerB" / f"{vid}_features.csv" if person == "speakerB"
+                else OUT / "speakerA" / f"fb_speakerA_{int(vid):02d}_features.csv")
         fp = "face1"
 
     hv, yv, pv, det = [], [], [], 0
@@ -77,8 +77,8 @@ def head_stats(vid, person, view):
 
 # ===================== HANDS =====================
 def hand_stats_maincam(vid, person):
-    face_key = "f1_cx" if person == "stella" else "f2_cx"
-    other_key = "f2_cx" if person == "stella" else "f1_cx"
+    face_key = "f1_cx" if person == "speakerB" else "f2_cx"
+    other_key = "f2_cx" if person == "speakerB" else "f1_cx"
     centers = {}
     for r in csv.DictReader(open(OUT / "maincam" / f"{vid}_features.csv")):
         c = {}
@@ -148,15 +148,15 @@ def _curl_summary(curls):
 # ===================== MOUTH =====================
 def mouth_stats():
     mc = json.load(open(OUT / "talking_pct.json"))
-    maincam = {p: {v: mc[v][p]["talk_pct"] for v in vids} for p in ["stella", "aru"]}
+    maincam = {p: {v: mc[v][p]["talk_pct"] for v in vids} for p in ["speakerB", "speakerA"]}
 
-    fullbody = {"stella": {}, "aru": {}}
+    fullbody = {"speakerB": {}, "speakerA": {}}
     mp = OUT / "fullbody_mouth.csv"
     if mp.exists():
         for r in csv.DictReader(open(mp)):
-            group = "aru" if r["group"] == "Aru" else "stella"
+            group = "speakerA" if r["group"] == "SpeakerA" else "speakerB"
             name = r["video"]
-            vid = (f"{int(name.split('_')[-1])}" if group == "aru" else name)
+            vid = (f"{int(name.split('_')[-1])}" if group == "speakerA" else name)
             if vid in vids:
                 fullbody[group][vid] = float(r["talk_pct"])
     return maincam, fullbody
@@ -176,7 +176,7 @@ def domain_rank(stats, keys):
 
 def build(view, mouth_mc, mouth_fb):
     head, hand, mouth = {}, {}, (mouth_mc if view == "maincam" else mouth_fb)
-    for person in ["stella", "aru"]:
+    for person in ["speakerB", "speakerA"]:
         head[person] = {v: head_stats(v, person, view) for v in vids}
         if view == "maincam":
             hand[person] = {v: hand_stats_maincam(v, person) for v in vids}
@@ -193,7 +193,7 @@ def build(view, mouth_mc, mouth_fb):
 
 def report(view, head, hand, mouth):
     domains = []
-    for person in ["stella", "aru"]:
+    for person in ["speakerB", "speakerA"]:
         domains.append((f"Hand {person.capitalize()}", hand[person],
                         ["CurlMean", "CurlStd", "CurlP25"]))
         domains.append((f"Head {person.capitalize()}", head[person],
@@ -206,7 +206,7 @@ def report(view, head, hand, mouth):
     print(f"{'domain':<16}{'rank(4,5)':>11}{'(4,5)':>9}{'best pair':>12}")
     ranks = {}
     for name, stats, keys in domains:
-        if not stats or len(stats.get("stella", stats.get("aru", {}))) < 6:
+        if not stats or len(stats.get("speakerB", stats.get("speakerA", {}))) < 6:
             pass
         r, rows = domain_rank(stats, keys)
         if not rows:
@@ -232,7 +232,7 @@ def report(view, head, hand, mouth):
 
 def main():
     mouth_mc, mouth_fb = mouth_stats()
-    missing = [f"{p}{v}" for p in ["stella", "aru"] for v in vids
+    missing = [f"{p}{v}" for p in ["speakerB", "speakerA"] for v in vids
                if v not in mouth_fb[p]]
     if missing:
         print("WARNING: no fullbody mouth for:", ", ".join(missing))

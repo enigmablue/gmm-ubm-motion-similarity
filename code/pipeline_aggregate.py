@@ -29,7 +29,7 @@ from pipeline import bh, exact_rho  # noqa: E402
 from review2_checks import consensus_from_scores  # noqa: E402
 
 DEST = Path(r"D:\Soqqle\Unity_Animation\FacialCapture\output\paper_review\final")
-LABELS = ["consensus", "Hand_Stella", "Hand_Aru", "Head_Stella", "Head_Aru"]
+LABELS = ["consensus", "Hand_SpeakerB", "Hand_SpeakerA", "Head_SpeakerB", "Head_SpeakerA"]
 
 
 def main():

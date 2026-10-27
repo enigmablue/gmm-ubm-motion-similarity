@@ -46,6 +46,8 @@ Verified against Python 3.11.9 with numpy 2.4.6, scipy 1.17.1, scikit-learn 1.9.
 
 ## Citation
 
+Archived at Zenodo: **https://doi.org/10.5281/zenodo.23688567** (version 1.0.0).
+
 See [`CITATION.cff`](CITATION.cff). If you use the code, please cite the manuscript.
 
 ## Licence

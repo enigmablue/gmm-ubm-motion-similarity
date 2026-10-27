@@ -1,0 +1,95 @@
+{
+ "units": "fw",
+ "head": {
+  "9D": {
+   "head_ranks": {
+    "Stella": 13.0,
+    "Aru": 14.0
+   },
+   "side_cons": 14.0,
+   "front_cons": 13.0
+  },
+  "9D+S": {
+   "head_ranks": {
+    "Stella": 13.0,
+    "Aru": 13.0
+   },
+   "side_cons": 14.0,
+   "front_cons": 13.0
+  },
+  "9D+E": {
+   "head_ranks": {
+    "Stella": 12.0,
+    "Aru": 13.0
+   },
+   "side_cons": 12.0,
+   "front_cons": 13.0
+  },
+  "9D+A": {
+   "head_ranks": {
+    "Stella": 13.0,
+    "Aru": 14.0
+   },
+   "side_cons": 13.5,
+   "front_cons": 11.5
+  },
+  "9D+E+S": {
+   "head_ranks": {
+    "Stella": 12.0,
+    "Aru": 12.0
+   },
+   "side_cons": 12.0,
+   "front_cons": 13.0
+  },
+  "9D+A+S": {
+   "head_ranks": {
+    "Stella": 13.0,
+    "Aru": 15.0
+   },
+   "side_cons": 14.0,
+   "front_cons": 12.0
+  },
+  "9D+A+E": {
+   "head_ranks": {
+    "Stella": 14.0,
+    "Aru": 15.0
+   },
+   "side_cons": 14.0,
+   "front_cons": 13.0
+  },
+  "18D": {
+   "head_ranks": {
+    "Stella": 14.0,
+    "Aru": 13.0
+   },
+   "side_cons": 13.5,
+   "front_cons": 12.5
+  }
+ },
+ "hand": {
+  "12D": {
+   "hand_ranks": {
+    "Stella": 7.0,
+    "Aru": 15.0
+   },
+   "side_cons": 13.5,
+   "front_cons": 12.5
+  },
+  "8D wrist": {
+   "hand_ranks": {
+    "Stella": 8.0,
+    "Aru": 15.0
+   },
+   "side_cons": 14.0,
+   "front_cons": 9.0
+  },
+  "4D finger": {
+   "hand_ranks": {
+    "Stella": 10.0,
+    "Aru": 1.0
+   },
+   "side_cons": 13.0,
+   "front_cons": 12.0
+  }
+ }
+}

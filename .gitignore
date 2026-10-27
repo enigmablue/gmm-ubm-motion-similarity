@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Local data and scratch
+data/
+output/
+*.csv
+*.npy
+*.npz
+*.pkl
+
+# Media — the recordings are not distributed
+*.mp4
+*.mov
+*.MOV
+*.avi
+*.png
+*.jpg
+*.jpeg
+
+# Archives and editor cruft
+*.zip
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# OS / IDE notebooks
+.ipynb_checkpoints/

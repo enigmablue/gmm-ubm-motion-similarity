@@ -1,0 +1,49 @@
+{
+ "units": "px",
+ "frontal_ranks": {
+  "Hand_Stella": {
+   "K": 5,
+   "r": 128,
+   "rank": 5.0,
+   "llr": -0.042282216212063746
+  },
+  "Hand_Aru": {
+   "K": 4,
+   "r": 32,
+   "rank": 3.0,
+   "llr": 0.10142445006178302
+  },
+  "Head_Stella": {
+   "K": 2,
+   "r": 64,
+   "rank": 9.0,
+   "llr": -0.5794499036465202
+  },
+  "Head_Aru": {
+   "K": 6,
+   "r": 32,
+   "rank": 3.0,
+   "llr": -0.15044768100280878
+  }
+ },
+ "dtw_retrieval": {
+  "domain_hits": 6,
+  "domain_trials": 24,
+  "domain_p": 0.12222222222222222,
+  "domain_mrr": 0.47013888888888894,
+  "speaker_hits": 4,
+  "speaker_trials": 12,
+  "speaker_p": 0.07777777777777778,
+  "speaker_mrr": 0.5083333333333333
+ },
+ "aggregate_retrieval": {
+  "domain_hits": 6,
+  "domain_trials": 24,
+  "domain_p": 0.08333333333333333,
+  "domain_mrr": 0.44652777777777786,
+  "speaker_hits": 3,
+  "speaker_trials": 12,
+  "speaker_p": 0.325,
+  "speaker_mrr": 0.44999999999999996
+ }
+}

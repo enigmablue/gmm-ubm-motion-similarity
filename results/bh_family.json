@@ -1,0 +1,74 @@
+{
+ "tests": {
+  "consensus": {
+   "label": "full four-domain consensus",
+   "rho": 0.5470011144609049,
+   "p": 0.025
+  },
+  "head": {
+   "label": "head only, two domains",
+   "rho": 0.18923774426905116,
+   "p": 0.4875
+  },
+  "hand": {
+   "label": "hand only, two domains",
+   "rho": 0.4251122785949301,
+   "p": 0.11388888888888889
+  },
+  "Hand_Stella": {
+   "label": "Stella hands",
+   "rho": -0.3071428571428571,
+   "p": 0.18888888888888888
+  },
+  "Hand_Aru": {
+   "label": "Aru hands",
+   "rho": 0.8357142857142855,
+   "p": 0.011111111111111112
+  },
+  "Head_Stella": {
+   "label": "Stella head",
+   "rho": 0.2071428571428571,
+   "p": 0.4861111111111111
+  },
+  "Head_Aru": {
+   "label": "Aru head",
+   "rho": 0.23928571428571427,
+   "p": 0.4375
+  }
+ },
+ "families": {
+  "m=1 consensus only": {
+   "consensus": 0.025
+  },
+  "m=3 consensus + head + hand": {
+   "consensus": 0.075,
+   "head": 0.4875,
+   "hand": 0.1708
+  },
+  "m=5 four domains + consensus": {
+   "consensus": 0.0625,
+   "Hand_Stella": 0.3148,
+   "Hand_Aru": 0.0556,
+   "Head_Stella": 0.4861,
+   "Head_Aru": 0.4861
+  },
+  "m=2 head + hand": {
+   "head": 0.4875,
+   "hand": 0.2278
+  }
+ },
+ "concordance": {
+  "consensus": {
+   "agree": 70,
+   "total": 101
+  },
+  "head only": {
+   "agree": 57,
+   "total": 98
+  },
+  "hand only": {
+   "agree": 65,
+   "total": 98
+  }
+ }
+}

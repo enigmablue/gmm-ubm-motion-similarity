@@ -1,0 +1,62 @@
+{
+ "23D wrist-relative": {
+  "dims": 23,
+  "Hand_St": 12.0,
+  "Hand_Ar": 5.0,
+  "C45": 0.6785714285714286,
+  "cons_rank": 2,
+  "K": {
+   "stella": 6,
+   "aru": 5
+  },
+  "r": {
+   "stella": 64,
+   "aru": 4
+  }
+ },
+ "8D wrist only": {
+  "dims": 8,
+  "Hand_St": 11.0,
+  "Hand_Ar": 5.0,
+  "C45": 0.6964285714285715,
+  "cons_rank": 2,
+  "K": {
+   "stella": 4,
+   "aru": 2
+  },
+  "r": {
+   "stella": 64,
+   "aru": 16
+  }
+ },
+ "4D finger only": {
+  "dims": 4,
+  "Hand_St": 3.0,
+  "Hand_Ar": 8.0,
+  "C45": 0.7857142857142858,
+  "cons_rank": 1,
+  "K": {
+   "stella": 6,
+   "aru": 3
+  },
+  "r": {
+   "stella": 64,
+   "aru": 32
+  }
+ },
+ "12D combined": {
+  "dims": 12,
+  "Hand_St": 6.0,
+  "Hand_Ar": 5.0,
+  "C45": 0.7857142857142858,
+  "cons_rank": 1,
+  "K": {
+   "stella": 4,
+   "aru": 2
+  },
+  "r": {
+   "stella": 128,
+   "aru": 32
+  }
+ }
+}

@@ -1,0 +1,926 @@
+{
+ "units_default": "fw",
+ "generated": "2026-10-27T07:16:05+00:00",
+ "entries": [
+  {
+   "id": "t2.Hand_Stella.rank",
+   "where": "Table 2, Hand_Stella, Rank column",
+   "value": 6.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Stella.K",
+   "where": "Table 2, Hand_Stella, K column",
+   "value": 4,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Stella.r",
+   "where": "Table 2, Hand_Stella, r column",
+   "value": 128,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Stella.rows",
+   "where": "Table 2, Hand_Stella, Frames column",
+   "value": 5363,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Stella.llr",
+   "where": "Table 2, Hand_Stella, (4,5) LLR column",
+   "value": -0.0802,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Aru.rank",
+   "where": "Table 2, Hand_Aru, Rank column",
+   "value": 5.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Aru.K",
+   "where": "Table 2, Hand_Aru, K column",
+   "value": 2,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Aru.r",
+   "where": "Table 2, Hand_Aru, r column",
+   "value": 32,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Aru.rows",
+   "where": "Table 2, Hand_Aru, Frames column",
+   "value": 5233,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Hand_Aru.llr",
+   "where": "Table 2, Hand_Aru, (4,5) LLR column",
+   "value": -0.207,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Stella.rank",
+   "where": "Table 2, Head_Stella, Rank column",
+   "value": 3.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Stella.K",
+   "where": "Table 2, Head_Stella, K column",
+   "value": 4,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Stella.r",
+   "where": "Table 2, Head_Stella, r column",
+   "value": 64,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Stella.llr",
+   "where": "Table 2, Head_Stella, (4,5) LLR column",
+   "value": -0.0341,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Aru.rank",
+   "where": "Table 2, Head_Aru, Rank column",
+   "value": 2.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Aru.K",
+   "where": "Table 2, Head_Aru, K column",
+   "value": 5,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Aru.r",
+   "where": "Table 2, Head_Aru, r column",
+   "value": 128,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t2.Head_Aru.llr",
+   "where": "Table 2, Head_Aru, (4,5) LLR column",
+   "value": 0.0873,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(1,2).C",
+   "where": "Table 3, pair (1,2), C column",
+   "value": 0.554,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(1,3).C",
+   "where": "Table 3, pair (1,3), C column",
+   "value": 0.321,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(1,4).C",
+   "where": "Table 3, pair (1,4), C column",
+   "value": 0.232,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(1,5).C",
+   "where": "Table 3, pair (1,5), C column",
+   "value": 0.161,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(1,6).C",
+   "where": "Table 3, pair (1,6), C column",
+   "value": 0.286,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(2,3).C",
+   "where": "Table 3, pair (2,3), C column",
+   "value": 0.661,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(2,4).C",
+   "where": "Table 3, pair (2,4), C column",
+   "value": 0.5,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(2,5).C",
+   "where": "Table 3, pair (2,5), C column",
+   "value": 0.536,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(2,6).C",
+   "where": "Table 3, pair (2,6), C column",
+   "value": 0.482,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(3,4).C",
+   "where": "Table 3, pair (3,4), C column",
+   "value": 0.643,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(3,5).C",
+   "where": "Table 3, pair (3,5), C column",
+   "value": 0.589,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(3,6).C",
+   "where": "Table 3, pair (3,6), C column",
+   "value": 0.625,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(4,5).C",
+   "where": "Table 3, pair (4,5), C column",
+   "value": 0.786,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(4,6).C",
+   "where": "Table 3, pair (4,6), C column",
+   "value": 0.482,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.(5,6).C",
+   "where": "Table 3, pair (5,6), C column",
+   "value": 0.643,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.c45_rank",
+   "where": "Table 3, (4,5) consensus rank",
+   "value": 1.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t3.c45_gap",
+   "where": "Results, gap from (4,5) to the next pair",
+   "value": 0.125,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.rho",
+   "where": "Table 5, framework cross-view rho",
+   "value": 0.547,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.p",
+   "where": "Table 5, framework exact p",
+   "value": 0.025,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.handaru_rho",
+   "where": "Results H1a, strongest domain rho",
+   "value": 0.836,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.speaker_hits",
+   "where": "Table 5, framework speaker retrieval",
+   "value": 2,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.domain_hits",
+   "where": "Table 5, framework domain retrieval",
+   "value": 3,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.speaker_p",
+   "where": "Table 5 caption, framework speaker p",
+   "value": 0.733,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.domain_p",
+   "where": "Table 5 caption, framework domain p",
+   "value": 0.967,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.speaker_mrr",
+   "where": "Results H2a, speaker MRR",
+   "value": 0.436,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.fw.domain_mrr",
+   "where": "Results H2a, domain MRR",
+   "value": 0.403,
+   "source": "output/paper_review/final/pipeline_retrieval_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.dtw.rho",
+   "where": "Table 5, sequence alignment rho",
+   "value": 0.342,
+   "source": "output/paper_review/final/pipeline_dtw_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.dtw.p",
+   "where": "Table 5, sequence alignment p",
+   "value": 0.433,
+   "source": "output/paper_review/final/pipeline_dtw_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.dtw.speaker_hits",
+   "where": "Table 5, DTW speaker retrieval",
+   "value": 3,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.dtw.domain_hits",
+   "where": "Table 5, DTW domain retrieval",
+   "value": 5,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.agg.rho",
+   "where": "Table 5, aggregate rho",
+   "value": -0.468,
+   "source": "output/paper_review/final/aggregate_reproduction.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.agg.p",
+   "where": "Table 5, aggregate p",
+   "value": 0.164,
+   "source": "output/paper_review/final/aggregate_reproduction.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.agg.speaker_hits",
+   "where": "Table 5, aggregate speaker retrieval",
+   "value": 3,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t5.agg.domain_hits",
+   "where": "Table 5, aggregate domain retrieval",
+   "value": 6,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t6.fw.side",
+   "where": "Table 6, framework side view",
+   "value": 1.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t6.fw.front",
+   "where": "Table 6, framework frontal view",
+   "value": 2.0,
+   "source": "output/paper_review/final/pipeline_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t6.dtw.side",
+   "where": "Table 6, sequence alignment side view",
+   "value": 13.5,
+   "source": "output/paper_review/final/pipeline_dtw_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t6.agg.side",
+   "where": "Table 6, aggregate side view",
+   "value": 1.0,
+   "source": "output/paper_review/final/aggregate_reproduction.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.23D wrist-relative.C45",
+   "where": "Table 7, 23D wrist-relative, C45",
+   "value": 0.679,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.23D wrist-relative.rank",
+   "where": "Table 7, 23D wrist-relative, consensus rank",
+   "value": 2,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.8D wrist only.C45",
+   "where": "Table 7, 8D wrist only, C45",
+   "value": 0.696,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.8D wrist only.rank",
+   "where": "Table 7, 8D wrist only, consensus rank",
+   "value": 2,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.4D finger only.C45",
+   "where": "Table 7, 4D finger only, C45",
+   "value": 0.786,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.4D finger only.rank",
+   "where": "Table 7, 4D finger only, consensus rank",
+   "value": 1,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.12D combined.C45",
+   "where": "Table 7, 12D combined, C45",
+   "value": 0.786,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t7.12D combined.rank",
+   "where": "Table 7, 12D combined, consensus rank",
+   "value": 1,
+   "source": "output/paper_review/final/hand_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D.C45",
+   "where": "Table 8, 9D, C45",
+   "value": 0.679,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D.z",
+   "where": "Table 8, 9D, z",
+   "value": 1.31,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+S.C45",
+   "where": "Table 8, 9D+S, C45",
+   "value": 0.75,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+S.z",
+   "where": "Table 8, 9D+S, z",
+   "value": 1.85,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+E.C45",
+   "where": "Table 8, 9D+E, C45",
+   "value": 0.75,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+E.z",
+   "where": "Table 8, 9D+E, z",
+   "value": 1.83,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A.C45",
+   "where": "Table 8, 9D+A, C45",
+   "value": 0.732,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A.z",
+   "where": "Table 8, 9D+A, z",
+   "value": 1.67,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+E+S.C45",
+   "where": "Table 8, 9D+E+S, C45",
+   "value": 0.804,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+E+S.z",
+   "where": "Table 8, 9D+E+S, z",
+   "value": 2.3,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A+S.C45",
+   "where": "Table 8, 9D+A+S, C45",
+   "value": 0.732,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A+S.z",
+   "where": "Table 8, 9D+A+S, z",
+   "value": 1.63,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A+E.C45",
+   "where": "Table 8, 9D+A+E, C45",
+   "value": 0.768,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.9D+A+E.z",
+   "where": "Table 8, 9D+A+E, z",
+   "value": 2.03,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.18D.C45",
+   "where": "Table 8, 18D, C45",
+   "value": 0.786,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "t8.18D.z",
+   "where": "Table 8, 18D, z",
+   "value": 1.93,
+   "source": "output/paper_review/final/head_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.Hand_Stella",
+   "where": "Comparator A, side view, Hand_Stella rank of (4,5)",
+   "value": 10.0,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.Head_Stella",
+   "where": "Comparator A, side view, Head_Stella rank of (4,5)",
+   "value": 11.0,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.Hand_Aru",
+   "where": "Comparator A, side view, Hand_Aru rank of (4,5)",
+   "value": 6.0,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.Head_Aru",
+   "where": "Comparator A, side view, Head_Aru rank of (4,5)",
+   "value": 15.0,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.side.C",
+   "where": "Comparator A, side-view consensus score",
+   "value": 0.321,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "compa.side.rank",
+   "where": "Comparator A, side-view consensus rank",
+   "value": 13,
+   "source": "output/paper_review/final/comparator_a_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.consensus.rho",
+   "where": "Results H1a, tested consensus correlation, rho",
+   "value": 0.547,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.consensus.p",
+   "where": "Results H1a, tested consensus correlation, exact p",
+   "value": 0.025,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.head.rho",
+   "where": "Results H1a, head-only correlation (descriptive), rho",
+   "value": 0.189,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.head.p",
+   "where": "Results H1a, head-only correlation (descriptive), exact p",
+   "value": 0.4875,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.hand.rho",
+   "where": "Results H1a, hand-only correlation (descriptive), rho",
+   "value": 0.425,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.hand.p",
+   "where": "Results H1a, hand-only correlation (descriptive), exact p",
+   "value": 0.11388888888888889,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.Hand_Aru.rho",
+   "where": "Results H1a, Aru hands (descriptive), rho",
+   "value": 0.836,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.Hand_Aru.p",
+   "where": "Results H1a, Aru hands (descriptive), exact p",
+   "value": 0.011111111111111112,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.Hand_Stella.rho",
+   "where": "Results H1a, Stella hands (descriptive), rho",
+   "value": -0.307,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.Hand_Stella.p",
+   "where": "Results H1a, Stella hands (descriptive), exact p",
+   "value": 0.18888888888888888,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.consensus.agree",
+   "where": "Results H1a, comparisons agreeing, comparisons agreeing",
+   "value": 70,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.consensus.total",
+   "where": "Results H1a, comparisons agreeing, comparisons usable",
+   "value": 101,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.head_only.agree",
+   "where": "Results H1a, head-only comparisons agreeing, comparisons agreeing",
+   "value": 57,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.head_only.total",
+   "where": "Results H1a, head-only comparisons agreeing, comparisons usable",
+   "value": 98,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.hand_only.agree",
+   "where": "Results H1a, hand-only comparisons agreeing, comparisons agreeing",
+   "value": 65,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.conc.hand_only.total",
+   "where": "Results H1a, hand-only comparisons agreeing, comparisons usable",
+   "value": 98,
+   "source": "output/paper_review/final/bh_family.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1b.top5",
+   "where": "Results H1b, top-five overlap",
+   "value": 2,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1b.top10",
+   "where": "Results H1b, top-ten overlap",
+   "value": 7,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1b.mean_shift",
+   "where": "Results H1b, mean rank shift",
+   "value": 3.47,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.loo_lo",
+   "where": "Results H1a, leave-one-out minimum",
+   "value": 0.347,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.loo_hi",
+   "where": "Results H1a, leave-one-out maximum",
+   "value": 0.697,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "h1a.loo_ns",
+   "where": "Results H1a, count not significant",
+   "value": 4,
+   "source": "output/paper_review/final/pipeline_textstats_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "seq.9D.side",
+   "where": "Sequence alignment, 9D head, side consensus",
+   "value": 14.0,
+   "source": "output/paper_review/final/dtw_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "seq.18D.side",
+   "where": "Sequence alignment, 18D head, side consensus",
+   "value": 13.5,
+   "source": "output/paper_review/final/dtw_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "seq.4D.finger.aru",
+   "where": "Sequence alignment, 4D finger, Aru hand rank",
+   "value": 1.0,
+   "source": "output/paper_review/final/dtw_ablation_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "front.Hand_Stella.rank",
+   "where": "Results, frontal Hand_Stella rank of (4,5)",
+   "value": 9.0,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "front.Hand_Aru.rank",
+   "where": "Results, frontal Hand_Aru rank of (4,5)",
+   "value": 1.0,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "front.Head_Stella.rank",
+   "where": "Results, frontal Head_Stella rank of (4,5)",
+   "value": 9.0,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  },
+  {
+   "id": "front.Head_Aru.rank",
+   "where": "Results, frontal Head_Aru rank of (4,5)",
+   "value": 3.0,
+   "source": "output/paper_review/final/pipeline_extras_fw.json",
+   "units": "fw",
+   "note": ""
+  }
+ ]
+}

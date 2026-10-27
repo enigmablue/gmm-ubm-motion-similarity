@@ -1,0 +1,329 @@
+{
+ "bundle_version": 1,
+ "workspace": "D:\\Soqqle\\Unity_Animation\\FacialCapture",
+ "environment": {
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "scikit-learn": "1.9.0",
+  "fastdtw": "0.3.4",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "built": "2026-10-27T07:16:05+00:00"
+ },
+ "scripts_core": {
+  "pipeline.py": "688d253bac3eed37",
+  "pipeline_retrieval.py": "c7fd04368da6aec8",
+  "pipeline_comparators.py": "99aebb9ea1b82eb6",
+  "pipeline_aggregate.py": "f9217de675ebaf98",
+  "pipeline_extras.py": "868d65c523661e7e",
+  "pipeline_units_tiebreak.py": "e6cb0306c0f1cfd8",
+  "pipeline_hand_ablation.py": "997fc2a4a1ebac20",
+  "pipeline_head_ablation.py": "2eca0099765d13c6",
+  "pipeline_dtw_ablation.py": "e1a1c392af16bf22",
+  "pipeline_comparator_a.py": "0a6ba277cf2ba389",
+  "pipeline_bh_family.py": "0bd1015de4200f22",
+  "pipeline_textstats.py": "e84686687a1d4df4",
+  "report_manifest.py": "855a818837074914"
+ },
+ "scripts_dependencies": {
+  "gmm_pure_fullbody.py": "a7e406bb8cc3026b",
+  "review2_raw_scores.py": "c77b72c4848b783a",
+  "review2_checks.py": "a57e41259d6b8281",
+  "table_all_methods.py": "18adf880464277ad",
+  "aggregate_seven.py": "7f7a4d72d4c9fa7d",
+  "crossview_exact.py": "0909cddc5fa25448",
+  "session_retrieval.py": "6fcdbfaeca44406b",
+  "canonical.py": "ae2e3bc03889d061",
+  "review2_method_tests.py": "eeff015df97b0427"
+ },
+ "scripts_extraction": {
+  "extract_maincam_hands_std.py": "dd594ec0b1d178cc",
+  "extract_solo_head_std.py": "3e076a89ae95ba34",
+  "extract_fullbody_mouth.py": "4578bddef923ff62"
+ },
+ "inputs": {
+  "output/maincam_hands_std": {
+   "exists": true,
+   "files": 12,
+   "bytes": 6463450,
+   "sha256_16": {
+    "1_aru_hand_landmarks.csv": "843902000a901fc4",
+    "1_stella_hand_landmarks.csv": "d8f5887a530547be",
+    "2_aru_hand_landmarks.csv": "43c569464182c832",
+    "2_stella_hand_landmarks.csv": "e5d1b87cebd54eab",
+    "3_aru_hand_landmarks.csv": "dc25a8973f83887d",
+    "3_stella_hand_landmarks.csv": "22412e2e942f0646",
+    "4_aru_hand_landmarks.csv": "796d73f010de6911",
+    "4_stella_hand_landmarks.csv": "27f9b69e82beecd1",
+    "5_aru_hand_landmarks.csv": "c8660941b773e4d2",
+    "5_stella_hand_landmarks.csv": "e6d982f8e65233f1",
+    "6_aru_hand_landmarks.csv": "2f16acb05d7c83e8",
+    "6_stella_hand_landmarks.csv": "040b6c18de47eae3"
+   }
+  },
+  "output/fullbody_std/landmarks": {
+   "exists": true,
+   "files": 12,
+   "bytes": 23086311,
+   "sha256_16": {
+    "1_aru_hand_landmarks.csv": "6002db737e683981",
+    "1_stella_hand_landmarks.csv": "b61d7d47a8d67226",
+    "2_aru_hand_landmarks.csv": "554faad854ac5115",
+    "2_stella_hand_landmarks.csv": "460ddf4ae84a6bd8",
+    "3_aru_hand_landmarks.csv": "272c5ae7377484db",
+    "3_stella_hand_landmarks.csv": "67e83b36751e001c",
+    "4_aru_hand_landmarks.csv": "32e1efba9bc0f1b3",
+    "4_stella_hand_landmarks.csv": "c86528f04af46f7a",
+    "5_aru_hand_landmarks.csv": "19d357cd0a10bd31",
+    "5_stella_hand_landmarks.csv": "8fc2940703bb7aa9",
+    "6_aru_hand_landmarks.csv": "1e884175b2d25dbe",
+    "6_stella_hand_landmarks.csv": "d0a4ec0cc9a8df8e"
+   }
+  },
+  "output/fullbody_std/features": {
+   "exists": true,
+   "files": 12,
+   "bytes": 428664,
+   "sha256_16": {
+    "1_aru_features.csv": "d02d864cccd1798c",
+    "1_stella_features.csv": "b040e6f95013a206",
+    "2_aru_features.csv": "0f5538e1e2fb2a9a",
+    "2_stella_features.csv": "0898060e3b93f621",
+    "3_aru_features.csv": "d60c20f6d08ea157",
+    "3_stella_features.csv": "bfe0781463cbd83f",
+    "4_aru_features.csv": "26b5e34f9f12a231",
+    "4_stella_features.csv": "53f855b8dbb3b4b3",
+    "5_aru_features.csv": "59e51740dde6c9f0",
+    "5_stella_features.csv": "d3ba5979f84a0dff",
+    "6_aru_features.csv": "f4a253756a107993",
+    "6_stella_features.csv": "23f89faa67f58ecf"
+   }
+  },
+  "output/maincam": {
+   "exists": true,
+   "files": 6,
+   "bytes": 4580511,
+   "sha256_16": {
+    "1_features.csv": "046a9f752bd35a82",
+    "2_features.csv": "d00dc0e1db42dd69",
+    "3_features.csv": "a0e5bdd7dacf7d0e",
+    "4_features.csv": "1895356b566a153f",
+    "5_features.csv": "3f6453f88c9c72a9",
+    "6_features.csv": "606836282039d773"
+   }
+  },
+  "output/solo_head_std": {
+   "exists": true,
+   "files": 12,
+   "bytes": 1182021,
+   "sha256_16": {
+    "1_aru_features.csv": "934eadd451e3bff3",
+    "1_stella_features.csv": "aae8346b60ad1880",
+    "2_aru_features.csv": "640a0cb37599fa7e",
+    "2_stella_features.csv": "9331d250ffdf4fd7",
+    "3_aru_features.csv": "d712085c13d6796c",
+    "3_stella_features.csv": "c55b7d0e7dfd9f20",
+    "4_aru_features.csv": "6d59c102b76d67d9",
+    "4_stella_features.csv": "a3ba9f89ffe1c8ed",
+    "5_aru_features.csv": "bcb6f165d92baf9f",
+    "5_stella_features.csv": "0d99c54b029afc1b",
+    "6_aru_features.csv": "49899c052f0d02a0",
+    "6_stella_features.csv": "36917577909a3622"
+   }
+  },
+  "output/stella": {
+   "exists": true,
+   "files": 6,
+   "bytes": 3088684,
+   "sha256_16": {
+    "1_features.csv": "caba0b44d10999b0",
+    "2_features.csv": "39bec3d4cc20814d",
+    "3_features.csv": "c904ad753a209d0f",
+    "4_features.csv": "726b7d522b7b5964",
+    "5_features.csv": "5d07136e75260f7c",
+    "6_features.csv": "addf4c10449ec884"
+   }
+  },
+  "output/aru": {
+   "exists": true,
+   "files": 6,
+   "bytes": 2872005,
+   "sha256_16": {
+    "fb_aru_01_features.csv": "d212440f8f75b34c",
+    "fb_aru_02_features.csv": "bbc0c385d47dd38c",
+    "fb_aru_03_features.csv": "e3c918454f5339e8",
+    "fb_aru_04_features.csv": "7ab26f02b10cb7f3",
+    "fb_aru_05_features.csv": "36febce6df0b17c5",
+    "fb_aru_06_features.csv": "dfffb42621601087"
+   }
+  },
+  "output/talking_pct.json": {
+   "exists": true,
+   "bytes": 1165,
+   "sha256_16": "9218e94fd7188039"
+  },
+  "output/fullbody_mouth.csv": {
+   "exists": true,
+   "bytes": 1398,
+   "sha256_16": "9d7ac3f847f53cf6"
+  }
+ },
+ "result_files": {
+  "aggregate_decomp.json": {
+   "sha256_16": "bbe981b2e786a5dd",
+   "bytes": 1271
+  },
+  "aggregate_diagnose.json": {
+   "sha256_16": "44136fa355b3678a",
+   "bytes": 2
+  },
+  "aggregate_reproduction.json": {
+   "sha256_16": "c98dfa0f296f4a2a",
+   "bytes": 1142
+  },
+  "bh_family.json": {
+   "sha256_16": "19150997c15871cc",
+   "bytes": 1406
+  },
+  "canonical.json": {
+   "sha256_16": "41b622812197f96b",
+   "bytes": 10505
+  },
+  "comparator_a_fw.json": {
+   "sha256_16": "fcc22abc39b48d4f",
+   "bytes": 1312
+  },
+  "comparator_a_px.json": {
+   "sha256_16": "2abcbecf1fe23ba0",
+   "bytes": 1312
+  },
+  "component_exact.json": {
+   "sha256_16": "444240ff768651aa",
+   "bytes": 7531
+  },
+  "crossview_exact.json": {
+   "sha256_16": "493068761c480b33",
+   "bytes": 1957
+  },
+  "dtw_ablation_fw.json": {
+   "sha256_16": "84d84ef9718d0d37",
+   "bytes": 1489
+  },
+  "dtw_ablation_px.json": {
+   "sha256_16": "8df268d48bdb8186",
+   "bytes": 1490
+  },
+  "dtw_two_hand.json": {
+   "sha256_16": "051410266dba974b",
+   "bytes": 817
+  },
+  "fullbody_variants.json": {
+   "sha256_16": "cb9fe6f663b8d864",
+   "bytes": 955
+  },
+  "hand_ablation_fw.json": {
+   "sha256_16": "7900f9ef5551a631",
+   "bytes": 892
+  },
+  "hand_ablation_px.json": {
+   "sha256_16": "bdc3eaf2a8ebdaf9",
+   "bytes": 891
+  },
+  "hand_fix_2x2.json": {
+   "sha256_16": "dbaff1e44b8aea05",
+   "bytes": 1068
+  },
+  "hand_fix_crossview.json": {
+   "sha256_16": "9b0910e033af5470",
+   "bytes": 1591
+  },
+  "hand_fix_v5.json": {
+   "sha256_16": "70c825bfc58c7519",
+   "bytes": 2816
+  },
+  "head_ablation_fw.json": {
+   "sha256_16": "18bbdfa904d31f6a",
+   "bytes": 1110
+  },
+  "head_ablation_px.json": {
+   "sha256_16": "33600b939db2a1cd",
+   "bytes": 1111
+  },
+  "interpret.json": {
+   "sha256_16": "a960a78db116eed6",
+   "bytes": 7735
+  },
+  "method_tests.json": {
+   "sha256_16": "c2812781a858adfe",
+   "bytes": 7820
+  },
+  "pipeline_dtw_fw.json": {
+   "sha256_16": "d58d6376ec5262a4",
+   "bytes": 1141
+  },
+  "pipeline_dtw_px.json": {
+   "sha256_16": "83d622d3db9873b7",
+   "bytes": 1154
+  },
+  "pipeline_extras_fw.json": {
+   "sha256_16": "864f1f22f238b773",
+   "bytes": 945
+  },
+  "pipeline_extras_px.json": {
+   "sha256_16": "b63d602bb01f74d3",
+   "bytes": 964
+  },
+  "pipeline_fw.json": {
+   "sha256_16": "44cf34a2ae100e9d",
+   "bytes": 2737
+  },
+  "pipeline_px.json": {
+   "sha256_16": "1124d699fd3032f7",
+   "bytes": 2716
+  },
+  "pipeline_retrieval_fw.json": {
+   "sha256_16": "5ed3abd6f5cb6e90",
+   "bytes": 879
+  },
+  "pipeline_retrieval_px.json": {
+   "sha256_16": "410826706689fbe1",
+   "bytes": 880
+  },
+  "pipeline_textstats_fw.json": {
+   "sha256_16": "d6a2d68cbfe35ed5",
+   "bytes": 909
+  },
+  "pipeline_textstats_px.json": {
+   "sha256_16": "39d22c7a0a19a077",
+   "bytes": 966
+  },
+  "raw_dtw.json": {
+   "sha256_16": "7dfa8e13e0689147",
+   "bytes": 4470
+  },
+  "raw_gmm.json": {
+   "sha256_16": "96aed2070870bf18",
+   "bytes": 4765
+  },
+  "retrieval_default.json": {
+   "sha256_16": "82a773273d795d64",
+   "bytes": 617
+  },
+  "retrieval_tables.json": {
+   "sha256_16": "77d30676fcdc3225",
+   "bytes": 2713
+  },
+  "review2_checks.json": {
+   "sha256_16": "c0176f428c32983f",
+   "bytes": 5680
+  },
+  "robustness_split.json": {
+   "sha256_16": "36381c2de6467991",
+   "bytes": 4695
+  },
+  "units_tiebreak.json": {
+   "sha256_16": "83c67e10efab2c1f",
+   "bytes": 805
+  }
+ }
+}

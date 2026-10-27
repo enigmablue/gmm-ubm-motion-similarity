@@ -1,0 +1,50 @@
+{
+  "maincam|Stella": {
+    "matched": 8,
+    "assign": 11,
+    "both": 8
+  },
+  "maincam|Aru": {
+    "matched": 15,
+    "assign": 15,
+    "both": 15
+  },
+  "maincam|consensus": {
+    "matched": {
+      "rank": 14,
+      "C": 0.25
+    },
+    "assign": {
+      "rank": 14,
+      "C": 0.14285714285714285
+    },
+    "both": {
+      "rank": 14,
+      "C": 0.25
+    }
+  },
+  "fullbody|Stella": {
+    "matched": 12,
+    "assign": 12,
+    "both": 12
+  },
+  "fullbody|Aru": {
+    "matched": 13,
+    "assign": 13,
+    "both": 13
+  },
+  "fullbody|consensus": {
+    "matched": {
+      "rank": 14,
+      "C": 0.1785714285714286
+    },
+    "assign": {
+      "rank": 14,
+      "C": 0.1785714285714286
+    },
+    "both": {
+      "rank": 14,
+      "C": 0.1785714285714286
+    }
+  }
+}

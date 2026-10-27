@@ -1,0 +1,58 @@
+[
+ {
+  "source": "landmarks",
+  "units": "px",
+  "rho": 0.2567084078711986,
+  "p": 0.31527777777777777,
+  "C": 0.8392857142857143,
+  "rank": 1,
+  "ranks": {
+   "Head_Stella": 3.0,
+   "Head_Aru": 2.0,
+   "Hand_Stella": 2.0,
+   "Hand_Aru": 6.0
+  }
+ },
+ {
+  "source": "landmarks",
+  "units": "fw",
+  "rho": 0.3881938232950705,
+  "p": 0.11527777777777778,
+  "C": 0.8571428571428572,
+  "rank": 1,
+  "ranks": {
+   "Head_Stella": 3.0,
+   "Head_Aru": 2.0,
+   "Hand_Stella": 4.0,
+   "Hand_Aru": 3.0
+  }
+ },
+ {
+  "source": "maincam_hands_std",
+  "units": "px",
+  "rho": 0.6869980023701305,
+  "p": 0.006944444444444444,
+  "C": 0.9107142857142857,
+  "rank": 1,
+  "ranks": {
+   "Head_Stella": 3.0,
+   "Head_Aru": 2.0,
+   "Hand_Stella": 1.0,
+   "Hand_Aru": 3.0
+  }
+ },
+ {
+  "source": "maincam_hands_std",
+  "units": "fw",
+  "rho": 0.5241511070297497,
+  "p": 0.03611111111111111,
+  "C": 0.7857142857142858,
+  "rank": 1,
+  "ranks": {
+   "Head_Stella": 3.0,
+   "Head_Aru": 2.0,
+   "Hand_Stella": 6.0,
+   "Hand_Aru": 5.0
+  }
+ }
+]

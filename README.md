@@ -44,17 +44,6 @@ python check_paths.py            # reports which scripts still hardcode a local 
 
 Verified against Python 3.11.9 with numpy 2.4.6, scipy 1.17.1, scikit-learn 1.9.0 and fastdtw 0.3.4.
 
-## Known limitations
-
-1. **Absolute paths.** 17 of the 24 shipped scripts hardcode `D:\Soqqle\...` paths from the development machine (23 occurrences; run `python check_paths.py` for the list). `config.py` is provided as the intended replacement, but the scripts have **not** been refactored to use it. To run on another machine you must edit the path constant at the top of each script you need.
-2. **No input data, and no result files.** With the recordings withheld, the scripts cannot be run from scratch by a third party, and nothing here can be recomputed. The code is published so the method can be read as implemented.
-3. **Scripts, not a library.** Several are internal cross-checks written during review (`review2_*.py`, `pipeline_extras.py`). They import each other by module name, so they have to sit in one directory.
-4. **Scope of the claim.** The dataset is one dyad, six sessions, 15 session pairs. Nothing in this repository establishes that the method generalises.
-
-## The pipeline in one paragraph
-
-Per domain (Stella-head, Aru-head, Stella-hand, Aru-hand) and per view: frames are subsampled every 5th frame (~6 Hz); head pose is 18-dimensional and hand kinematics 12-dimensional; features are scaled by median and interquartile range pooled over all six recordings; a Universal Background Model is fitted to the pooled frames, with the component count chosen by BIC and components under 1% occupancy rejected; each recording is adapted by MAP estimation, with the relevance factor chosen by a within-recording A/B self-consistency test that never compares recordings; recordings are scored by cross-fitted symmetric log-likelihood ratio; and the four domain rankings are converted to normalised ranks and averaged into a consensus score.
-
 ## Citation
 
 See [`CITATION.cff`](CITATION.cff). If you use the code, please cite the manuscript.

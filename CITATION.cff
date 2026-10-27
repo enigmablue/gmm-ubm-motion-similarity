@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code, please cite the accompanying manuscript."
 title: "GMM-UBM motion signatures for cross-recording similarity of conversational head and hand motion"
 abstract: >-
-  Analysis code and derived results for a study that summarises each conversation
+  Analysis code for a study that summarises each conversation
   recording as a motion signature (a Gaussian Mixture Model adapted from a shared
   Universal Background Model) and compares recordings by cross-fitted
   log-likelihood ratio, merging four per-speaker, per-body-part rankings into a
@@ -12,15 +12,13 @@ authors:
   - family-names: Lopez-Ozieblo
     given-names: Renia
     affiliation: "Department of English and Communication, The Hong Kong Polytechnic University"
-    orcid: ""
   - family-names: Shen
     given-names: Daniel Jiandong
     affiliation: "Soqqle Hong Kong Limited"
-    orcid: ""
-repository-code: ""        # fill in after the first push
-url: ""                    # fill in after the first push
+repository-code: "https://github.com/enigmablue/gmm-ubm-motion-similarity"
+url: "https://github.com/enigmablue/gmm-ubm-motion-similarity"
 license: MIT
-version: 0.1.0
+version: 1.0.0
 date-released: "2026-10-27"
 keywords:
   - motion signature
